@@ -1,0 +1,180 @@
+/* Format the body and create a grid structure. */
+body {
+    background-color: lavender;
+    font-family:'Courier New', Courier, monospace;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    'header header header header'
+    'description description description description'
+    'favourites favourites favourites aside'
+    'footer footer footer footer';
+    gap: 1rem;
+}
+
+/* Format the header and contents of the header */
+#header{
+    display: flex;
+    grid-area: header;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 0.5rem solid #3a2d3d;
+    background: linear-gradient(lavender, #3a2d3d);
+}
+
+#page-header{
+    font-size: 30px;
+    color: whitesmoke;
+}
+
+.whitewriting{
+    color: whitesmoke;
+}
+
+.brownwriting{
+    color: #3f3636;
+}
+
+.blackwriting{
+    color: black;
+}
+
+.nav ul {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.nav li {
+    list-style-type: none;
+    margin: 0 8px;
+    padding: 20px;
+}
+
+/* Format the main introductory section */
+#description {
+    display: flex;
+    grid-area: description;
+    margin: 10px;
+    padding: 10px 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+#description main{
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: black 0 0 15px 0;
+    border: 4mm ridge #7b589799;
+    margin: 10px;
+    padding: 10px 10px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+/* Format the footer */
+#footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-area: footer;
+}
+
+#footer ul{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+#footer ul>li{
+    padding: 20px;
+    margin: 0 8px; 
+    list-style-type: none;
+    align-items: center;
+    font-style: italic;
+}
+
+.copyright{
+    padding: 20px;
+    margin: 20px;
+}
+
+/* Format the gallery wall */
+
+#favourites{
+    grid-area: favourites;
+}
+
+.project{
+    padding: 5px;
+    text-align: center;
+}
+
+
+#articles{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    flex-basis: 10%; 
+}
+
+.frame{
+    border: 4mm ridge #2b1a0e99;  
+}
+
+#aside{
+    grid-area: aside;
+    border-block: solid #7b589799;
+    writing-mode: horizontal-tb;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #bd5ca08c;
+    color: whitesmoke;
+    padding: 10px;
+    font-size: 16px;
+    border: thin solid whitesmoke;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: whitesmoke;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px #00000033;
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color: #7b589799;}
